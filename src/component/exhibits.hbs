@@ -1,0 +1,20 @@
+<div>
+  <p>
+    <ul>
+      {{#each exhibits}}
+        <li>
+          <b>{{name}}</b>
+          |
+          {{#if artist}}
+            {{artist}}
+            |
+          {{/if}}
+          {{description}}
+          {{#if audio_guide}}
+            | Audio guide
+          {{/if}}
+        </li>
+      {{/each}}
+    </ul>
+  </p>
+</div>
