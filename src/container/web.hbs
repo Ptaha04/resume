@@ -9,9 +9,9 @@
 			<h1>Programming Languages</h1>
 			<div>
 				{{#each languages}}
-					<div><h2>{{name}}</h2> {{version}}</div>
+					<div><h2>{{name}}</h2></div> 
+					<div>{{version}}</div>
 					<div>{{description}}</div>
-					<p><h3>Elements:</h3></p>
 						<div>
 							{{> elements name=name decription=description}}
 						</div>
