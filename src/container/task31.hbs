@@ -1,0 +1,59 @@
+<main>
+    <div class="row g-5">
+        <section class='col-8'>
+            <div>
+                {{#with navigation}}
+                    <table class='table'>
+                        <tbody>
+                            <tr>
+                                {{#each links}}
+                                    {{> links}}
+                                {{/each}}
+                                <th>
+                                    <a href={{button.href}} class='btn btn-primary'>{{button.text}}</a>
+                                </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                {{/with}}
+            </div>
+        </section>
+
+
+        <section class="col-10">
+            <div>
+                {{#with header}}
+                    <div><h1>{{title}}</h1></div>
+                    <p>{{description}}</p>
+                    <a href={{button.link}} class='btn btn-primary'>{{button.text}}</a>
+                {{/with}}
+            </div>
+            <hr>
+        </section>
+
+        <section class="col-10 ">
+            <div>
+                {{#with city}}
+                    <div><h2>{{title}}</h2></div>
+                    <div>
+                        {{#each cards}}
+                            <div class="card col-5">
+                                <div class="card-body">
+                                    <img class="card-img-top" src="{{picture.src}}" alt="{{picture.alt}}">
+                                    <div>
+                                        <h5 class='card-title'>{{title}}</h5>
+                                        <p class='text-secondary'>{{description}}</p>
+                                        <a href="{{button.href}}" class='btn btn-primary'>{{button.text}}</a>
+                                    </div>
+                                </div>
+                            </div>
+                        {{/each}}
+                    </div>
+                {{/with}}
+            </div>
+        </section>
+
+        
+
+    </div>
+</main>
