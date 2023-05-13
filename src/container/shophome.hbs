@@ -1,0 +1,151 @@
+<main>
+  <div class='nav m-4'>
+    {{#with navigation}}
+      {{#each links}}
+        <div class='nav-item'>
+          <a href='{{href}}' class='nav-link'>{{text}}</a>
+        </div>
+      {{/each}}
+      <div class='nav-item'>
+        <a href='#' class='nav-link disabled'>Disabled</a>
+      </div>
+    {{/with}}
+  </div>
+
+  <div class='ms-3'>
+    {{#with newsBlock}}
+      <div><h2 class='m-2'>{{title}}</h2></div>
+      <div class='row'>
+        {{#each cards}}
+          <div class='col-3 g-1'>
+            <div class='card'>
+              <div class='card-body text-bg-dark'>
+                <h5 class='card-title'>{{title}}</h5>
+                {{#if isNew}}
+                  <h6
+                    class='badge text-bg-success rounded-pill text-uppercase'
+                  >New</h6>
+                {{/if}}
+                {{#if isTop}}
+                  <h6
+                    class='badge text-bg-danger rounded-pill text-uppercase'
+                  >Top</h6>
+                {{/if}}
+                <p class=''>{{description}}</p>
+              </div>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    {{/with}}
+  </div>
+
+  <div>
+    {{#with goodsBlock}}
+      <div class='col-12 m-5'>
+        <div class='nav nav-tabs'>
+          {{#each tabs}}
+            <div class='nav-item'>
+              {{#if isActive}}
+                <a
+                  href='#'
+                  class='nav-link active'
+                >{{text}}</a>
+              {{else}}
+                {{#if isDisabled}}
+                  <a
+                    href='#'
+                    class='nav-link disabled'
+                  >{{text}}</a>
+
+                {{else}}
+                  <a href='#' class='nav-link'>{{text}}</a>
+                {{/if}}
+              {{/if}}
+            </div>
+          {{/each}}
+        </div>
+      </div>
+
+      <div>
+        <div class='row ms-2'>
+          {{#each cards}}
+            <div class='col-4 g-2'>
+              <div class='card'>
+                <img class='card-img-top' src='{{image}}' />
+                <div class='card-body text-bg-secondary'>
+                  <h5 class='card-title'>{{title}}</h5>
+                  {{#if isNew}}
+                    <h6
+                      class='badge text-bg-primary rounded-pill text-uppercase'
+                    >New</h6>
+                  {{/if}}
+                  {{#if isHot}}
+                    <h6
+                      class='badge text-bg-warning rounded-pill text-uppercase'
+                    >Hot</h6>
+                  {{/if}}
+                  <p>{{description}}</p>
+                </div>
+              </div>
+            </div>
+          {{/each}}
+        </div>
+      </div>
+    {{/with}}
+  </div>
+
+  <div class='col-12 m-2'>
+    {{#with subscribe}}
+      <div class='card text-bg-dark'>
+        <div class='card-header'><h2>{{header}}</h2></div>
+        <div class='card-body'>
+          <p>{{description}}</p>
+          {{#each buttons}}
+            <div class='m-3'>
+              <a
+                href='{{link}}'
+                class='btn btn-primary'
+              >{{text}}</a>
+            </div>
+          {{/each}}
+        </div>
+      </div>
+    {{/with}}
+  </div>
+
+  <div class='col-12 m-2 text-center'>
+    {{#with service}}
+      <div class='card text-bg-success'>
+        <div class='card-body'>
+          <div class='card-title'><h2>{{title}}</h2></div>
+          <p>{{description}}</p>
+          {{#each buttons}}
+            <div class='mt-3'>
+              <a
+                href='{{link}}'
+                class='btn btn-primary'
+              >{{text}}</a>
+            </div>
+          {{/each}}
+        </div>
+      </div>
+    {{/with}}
+  </div>
+
+    <div class='row p-3 text-center'>
+        {{#each footer}}
+            <div class='col-2 nav flex-column'>
+                {{#each this}}
+                    <div class='nav-item'>
+                        <a href='{{link}}'
+                        class='nav-link {{#if @last}}disabled{{/if}}'
+                        >{{text}}</a>
+                    </div>
+                {{/each}}
+            </div>
+        {{/each}}
+
+    </div>
+
+</main>
