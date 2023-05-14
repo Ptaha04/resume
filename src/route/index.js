@@ -299,7 +299,6 @@ router.get('/work', function (req, res) {
   })
 })
 
-<<<<<<< HEAD
 // ================================================================
 
 // router.get Створює нам один ентпоїнт
@@ -316,23 +315,19 @@ router.get('/bootstrap', function (req, res) {
       title: 'bootstrap',
     },
   })
-  //                  ↑↑ сюди вводимо JSON дані
-
-
+})
+//                  ↑↑ сюди вводимо JSON дані
 
 // ================================================================
-
 
 router.get('/program', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('program', {
-
     layout: 'program',
 
     page: {
       title: 'Cultural Tour',
     },
-
 
     program: {
       excursion: {
@@ -412,12 +407,9 @@ router.get('/program', function (req, res) {
       },
     },
   })
->>>>>>> 1ea30fbf0a7a30c9f4565f99bd934bdec73ad87b
 })
 
 // ================================================================
-
-
 
 // Підключаємо роутер до бек-енду
 module.exports = router
