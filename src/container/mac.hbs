@@ -1,0 +1,94 @@
+<div>
+  <main>
+    <section>
+      <h1>{{name}}</h1>
+      <em><b>{{description}}</b></em>
+      <p>Price: {{price}}</p>
+      <p>Category: {{category}}</p>
+
+    </section>
+    <hr />
+
+    <section>
+      {{#with features}}
+        
+        {{> features name='Processor' component=processor}}
+        {{> features name='Memory' component=memory}}
+        {{> features name='Storage' component=storage}}
+        {{> features name='Display' component=display}}
+        {{> features name='Graphics' component=graphics}}
+        {{!-- {{> features name='Ports' component=ports}} --}}
+        
+        <div>
+            <div><b>Ports</b></div>
+            <ul>
+                {{#each ports}}
+                    <li>
+                        {{type}} - 
+                        {{count}}
+                        <ul>
+                            {{#each features}}
+                                <li>
+                                    {{this}}
+                                </li>
+                            {{/each}}
+                        </ul>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+       <hr>
+
+       {{> features name='Battery' component=battery}}
+       
+        <div>
+            <div><b>Weight</b></div>
+            <ul>
+                {{#with weight}}
+                    <li>
+                        {{../ weight}}
+                    </li>
+                {{/with}}
+            </ul>
+        </div>
+        <hr />
+       {{> features name='Dimensions' component=dimensions}}
+       
+       <div>
+            <div><b>Operating system</b></div>
+            <ul>
+                {{#with operating_system}}
+                    <li>
+                        {{../ operating_system}}
+                    </li>
+                {{/with}}
+            </ul>
+        </div>
+        <hr />
+      
+       <div>
+            <div><b>Accessories</b></div>
+            <ul>
+                {{#each accessories}}
+                    <li>
+                        {{name}} - 
+                        {{price}}
+                        {{!-- <ul>
+                            {{#each features}}
+                                <li>
+                                    {{this}}
+                                </li>
+                            {{/each}}
+                        </ul> --}}
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+       <hr>
+
+       
+      {{/with}}
+    </section>
+
+  </main>
+</div>
