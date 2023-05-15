@@ -4,26 +4,20 @@
 }}
 
 <div>
-    {{#with main}}
+    {{#with web}}
 		<main>
-			<section class="mb-3">
-				{{> title data=summary.title big=true}}
-				<div>
-					<p>
-						{{summary.text}}
-					</p>
-				</div>
-			</section>
-			{{#with experience}}
-				<section>
-					{{> title data=title big=false}}
-					<div>
-						<p>
-							{{text}}
-						</p>
-					</div>
-				</section>    
-			{{/with}}
+			<h1>Programming Languages</h1>
+			<div>
+				{{#each languages}}
+					<div><h2>{{name}}</h2></div> 
+					<div>{{version}}</div>
+					<div>{{description}}</div>
+						<div>
+							{{> elements name=name decription=description}}
+						</div>
+					<hr>
+				{{/each}}
+			</div>
 		</main>
 	{{/with}}
 </div>
