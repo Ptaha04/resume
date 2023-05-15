@@ -1,0 +1,33 @@
+<div>
+	<main>
+		<div>
+		<h1>{{name}}</h1>
+		<p><em>{{description}}</em></p>
+		{{#with history}}
+			<div><b>Founder: {{founder}}</b></div>
+			<div><b>Launch Date: {{year}}</b></div>
+		{{/with}}
+		<hr />
+		</div>
+
+
+		{{> list title='Types of Variebles' list=types}}
+		{{> list title='Syntax' list=syntax}}
+		{{> list title='Features' list=features}}
+		{{> list title='Libraries' list=libraries}}
+		{{> list title='Tools' list=tools}}
+	
+		<div>
+			<h2>Community</h2>
+			<ul>
+				{{#each community}}
+					<li>
+						<b>{{name}}</b>
+						| 
+						{{type}}
+					</li>
+				{{/each}}
+			</ul>
+		</div>
+	</main>
+</div>
