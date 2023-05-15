@@ -1,0 +1,78 @@
+<div>
+    <main>
+        <div><h1>{{name}}</h1></div>
+        <hr>
+        
+        <div>
+            <ul>
+                {{#each users}}
+                    <li>
+                        {{> user}}
+                        
+                        <div>
+                            {{#if friends}}
+                                <div>
+                                    <div><h6>Friends</h6></div>
+                                    <ul>
+                                        {{#each friends}}
+                                            <li>
+                                                {{> user}}
+                                                
+                                                <div>
+                                                    {{#if mutual_friends}}
+                                                        <div>
+                                                            <div><h6>Mutual friends</h6></div>
+                                                            <ul>
+                                                                {{#each mutual_friends}}
+                                                                    <li>
+                                                                        {{> user}}
+                                                                        
+
+                                                                        <div>
+                                                                            {{#if mutual_friends}}
+                                                                                <div>
+                                                                                    <div><h6>Mutual friends</h6></div>
+                                                                                    <ul>
+                                                                                        {{#each mutual_friends}}
+                                                                                            <li>
+                                                                                                {{> user}}
+                                                                                                
+                                                                                            </li>
+                                                                                        {{/each}}
+                                                                                    </ul>
+                                                                                </div>
+                                                                            {{/if}}
+                                                                        </div>
+                                                                        
+                                                                    </li>
+                                                                {{/each}}
+                                                            </ul>
+                                                        </div>
+                                                    {{/if}}
+                                                </div>
+                                                <div>
+                                                    {{#if groups}}
+                                                        {{> groupCard}}
+                                                    {{/if}}
+                                                </div>
+                        
+                                            </li>
+                                        {{/each}}
+                                    </ul>
+                                </div>
+                            {{/if}}
+                        </div>
+                        <div>
+                            {{#if groups}}
+                                {{> groupCard}}
+                            {{/if}}
+                        </div>
+                    </li>
+                {{/each}}
+            </ul>
+
+        </div>
+
+
+    </main>
+</div>
