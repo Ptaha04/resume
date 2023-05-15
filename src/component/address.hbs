@@ -1,0 +1,14 @@
+<div>
+  {{#with person}}
+        <div>
+            <b>
+                {{> point text=address.street line=true }}
+                {{> point text=address.city line=true }}
+                {{> point text=address.state line=true }}
+                {{> point text=address.zip line=true }}
+                {{> point text=address.country noLine=true }}
+                
+            </b>
+        </div>
+    {{/with}}
+</div>
