@@ -1,0 +1,18 @@
+{{!-- {{#each program}} --}}
+<div>
+  <p>
+    <div><b>{{name}}</b></div>
+    <div>
+      {{#with location}}
+        <address>
+          {{address}}
+          |
+          {{city}}
+          |
+          {{country}}
+        </address>
+      {{/with}}
+    </div>
+  </p>
+</div>
+{{!-- {{/each}} --}}
