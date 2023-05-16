@@ -1,0 +1,24 @@
+<div>
+  <div><h6>Groups</h6></div>
+  <ul>
+    {{#each groups}}
+      <li>
+        <div>Id: {{id}}</div>
+        <div>Name: <b>{{name}}</b></div>
+        <div>Descripyion: {{description}}</div>
+        <hr />
+        <div>
+            <div><h6>Members</h6></div>
+            {{#if members}}
+                <ul>
+                    {{#each members}}
+                        {{> user}}
+                    {{/each}}
+                </ul>
+                
+            {{/if}}
+        </div>
+      </li>
+    {{/each}}
+  </ul>
+</div>
