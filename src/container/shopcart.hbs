@@ -1,0 +1,72 @@
+<main class="ms-5">
+
+    {{> headerNav}}
+    
+    <hr />
+
+  
+    <div class='col-4 ms-4 my-4'>
+        {{#with header}}
+            <div><h1>{{title}}</h1></div>
+                {{#with button}}
+                    <a href="{{link}}" class='btn btn-outline-secondary'>{{text}}</a>
+                {{/with}}
+            </div>
+        {{/with}}
+    </div> 
+
+    <hr>
+
+    {{> goodsBlock}}
+
+
+    <div class='ms-2'>
+        {{#with total}}
+            <div class="ms-3 my-3"><h4>{{title}}</h4></div>
+            <div class="ms-3 my-1"><h2>{{amount}}</h2></div>
+            <div class="ms-3">{{delivery}}</div>
+            {{#each buttons}}
+                <div>
+                    {{#if isSuccess}}
+                        <a href="{{link}}" class='btn btn-success m-2'>{{text}}</a>
+                    {{/if}}
+                    {{#if isOutline}}
+                        <a href="{{link}}" class='btn btn-outline-success m-2'>{{text}}</a>
+                    {{/if}}
+                </div>
+            {{/each}}
+        {{/with}}
+    </div>
+
+    <hr>
+
+    {{> goodsOther}}
+    
+    <hr>
+
+    <div class='col-12 ms-2 my-4'>
+        {{#with subscribe}}
+        <div class='card text-bg-dark'>
+            <div class='card-header'><h2>{{header}}</h2></div>
+            <div class='card-body'>
+            <p>{{description}}</p>
+            {{#each buttons}}
+                <div class='m-3'>
+                <a
+                    href='{{link}}'
+                    class='btn btn-primary'
+                >{{text}}</a>
+                </div>
+            {{/each}}
+            </div>
+        </div>
+        {{/with}}
+    </div>
+
+    <hr>
+
+
+    {{> footerNav}}
+    
+    
+</main>
