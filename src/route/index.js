@@ -264,7 +264,7 @@ router.get('/work', function (req, res) {
 
           projects: [
             {
-              name: 'RESUME',
+              name: 'ReSUME',
               url: 'https://resume.com.ua',
               about:
                 'Airbnb competitor. kjnkjnfd kjnkjng kjnm,n.,ad',
