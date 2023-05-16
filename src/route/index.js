@@ -242,7 +242,7 @@ router.get('/work', function (req, res) {
     layout: 'big',
 
     page: {
-      title: 'Resume | Work',
+      title: 'Resume|Work',
     },
 
     header,
