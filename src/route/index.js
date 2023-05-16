@@ -301,7 +301,6 @@ router.get('/work', function (req, res) {
 
 // ================================================================
 
-
 // router.get Створює нам один ентпоїнт
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
@@ -311,7 +310,8 @@ router.get('/bootstrap', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('bootstrap', {
     layout: 'bootstrap',
-
+  })
+})
 
 // router.get Створює нам один ентпоїнт
 
@@ -375,13 +375,11 @@ router.get('/task22', function (req, res) {
         },
       },
     },
-
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
 
 // ================================================================
-
 
 // ================================================================
 
@@ -463,7 +461,6 @@ router.get('/task21', function (req, res) {
 })
 
 // ================================================================
-
 
 // router.get Створює нам один ентпоїнт
 
@@ -631,7 +628,6 @@ router.get('/facebook', function (req, res) {
 
 // ================================================================
 
-
 // router.get Створює нам один ентпоїнт
 
 router.get('/mac', function (req, res) {
@@ -727,8 +723,6 @@ router.get('/mac', function (req, res) {
 })
 
 // ================================================================
-
-
 
 // router.get Створює нам один ентпоїнт
 
@@ -832,8 +826,8 @@ router.get('/car', function (req, res) {
       total: 28990,
     },
   })
-  //                  ↑↑ сюди вводимо JSON дані
-
+})
+//                  ↑↑ сюди вводимо JSON дані
 
 router.get('/js', function (req, res) {
   // res.render генерує нам HTML сторінку
@@ -921,17 +915,14 @@ router.get('/js', function (req, res) {
 
 // ================================================================
 
-
 router.get('/web', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('web', {
-
     layout: 'basic',
 
     page: {
       title: 'WEB',
     },
-
 
     web: {
       languages: [
@@ -972,7 +963,15 @@ router.get('/web', function (req, res) {
                   name: 'class',
                   description:
                     'Specifies one or more class names for an HTML element.',
-
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  })
+})
 
 // ================================================================
 
@@ -1070,7 +1069,6 @@ router.get('/person', function (req, res) {
                       ],
                     },
                   ],
-
                 },
               ],
             },
@@ -1153,9 +1151,10 @@ router.get('/person', function (req, res) {
           ],
         },
       ],
+    },
+  })
+})
 
-      ],
-      
 // router.get Створює нам один ентпоїнт
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
@@ -1260,11 +1259,8 @@ router.get('/program', function (req, res) {
           },
         ],
       },
-
-
     },
   })
-
 })
 
 // ================================================================
@@ -1533,13 +1529,6 @@ router.get('/task31', function (req, res) {
 })
 
 // ================================================================
-
-
-
-
-
-
-
 
 // Підключаємо роутер до бек-енду
 module.exports = router
