@@ -1,0 +1,40 @@
+<div>
+  <ul>
+    {{#each users}}
+      <li>
+        {{> user id=id name=name gender=gender age=age}}
+        
+        <div>
+          {{#if friends}}
+            <div>
+              <div><h6>Friends</h6></div>
+              <ul>
+                {{#each friends}}
+                  <li>
+                    {{> user id=id name=name gender=gender age=age}}
+                    
+                    <div>
+                      {{#if mutual_friends}}
+                        <div>
+                          <div><h6>Mutual friends</h6></div>
+                          <ul>
+                            {{#each mutual_friends}}
+                                <li>
+                                    {{> user id=id name=name gender=gender age=age}}
+                                </li>
+                            {{/each}}
+                          </ul>
+                        </div>
+                      {{/if}}
+                    </div>
+                  </li>
+                {{/each}}
+              </ul>
+            </div>
+          {{/if}}
+        </div>
+      </li>
+    {{/each}}
+  </ul>
+
+</div>
