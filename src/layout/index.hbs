@@ -5,8 +5,8 @@
 
 <html>
 
-  <head>
-    <title>
+    <head>
+        <title>
             {{page.title}}
         </title>
         <meta charset='utf-8' />
@@ -32,25 +32,32 @@
         </style>
 
         <link href='css/style.css' rel='stylesheet' />
-  </head>
 
-  <body>
-    <div>
-      {{> nav}}
-    </div>
+    </head>
 
-    <hr />
+    <body>
 
-    {{!  ↓  ця кострукція показує куди шаблонізатору треба вставляти код з container файлу   }}
-    {{{body}}}
+        {{!-- {{> nav}} --}}
 
-    {{! <br /> }}
-    {{! <hr /> }}
+		<div class="ms-5 my-3">
+			{{> header}}
+		</div>
+    
 
-    <script
-      src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js'
-    ></script>
+		{{!  ↓  ця кострукція показує куди шаблонізатору треба вставляти код з container файлу   }}
+		<div class="m-2">
+			{{{body}}}
+		</div>
+		
 
-  </body>
+		<div class="m-5">
+			{{> footer}}
+		</div>
+
+        <script
+        src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js'
+        ></script>
+
+    </body>
 
 </html>

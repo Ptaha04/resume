@@ -1,15 +1,36 @@
-{{! 
-Це код container файлу для index сторінки, 
-в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
- }}
+<div class='ms-5'>
+	<div class='list-group'>
+		<div class='list-group-title'><h2>Resume</h2></div>
+			{{#with navButtons}}
+				<div class='list-group-item'>
+					<div class='row'>
+						{{#each links}}
+							<div class='col my-3'>
+								<a
+									href='{{href}}'
+									class='btn btn-primary'
+								>{{text}}</a>
+							</div>
+						{{/each}}
+					</div>
+				</div>
 
-<div class='p-5'>
-  <h1>USB хаб Type C 12 в 1 HDMI VGA AUX 3.5 mm</h1>
-
-  <button
-    type='button'
-    class='btn btn-primary'
-  >Купити</button>
+				<div class='list-group-item'>
+					<h4 class='my-4' style='color: green;'>Projects</h4>
+					<div class='row'>
+						{{#each projects}}
+							<div class='col-3 my-2'>
+								<a
+									href='{{href}}'
+									class='btn btn-outline-primary'
+								>{{text}}</a>
+							</div>
+						{{/each}}
+					</div>
+				</div>
+			{{/with}}
+		</div>
+	</div>	
 </div>
 
 {{! 
