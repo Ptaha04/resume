@@ -1,39 +1,36 @@
 <div class='ms-5'>
-  <h2 class='mb-3'>Resume</h2>
+	<div class='list-group'>
+		<div class='list-group-title'><h2>Resume</h2></div>
+			{{#with navButtons}}
+				<div class='list-group-item'>
+					<div class='row'>
+						{{#each links}}
+							<div class='col my-3'>
+								<a
+									href='{{href}}'
+									class='btn btn-primary'
+								>{{text}}</a>
+							</div>
+						{{/each}}
+					</div>
+				</div>
 
-  <div>
-    {{#with navButtons}}
-      {{#each links}}
-        <div class='m-2'>
-          <a
-            href='{{href}}'
-            class='btn btn-primary'
-          >{{text}}</a>
-        </div>
-      {{/each}}
-    {{/with}}
-
-    {{! <div>
-      <a href='/summary' class='btn btn-primary'>Summary</a>
-    </div>
-    <div>
-      <a href='/skills' class='btn btn-primary'>Skills</a>
-    </div>
-    <div>
-      <a
-        href='/education'
-        class='btn btn-primary'
-      >Education</a>
-    </div>
-    <div>
-      <a href='/work' class='btn btn-primary'>Work</a>
-    </div>
-    <div>
-      <a href='/person' class='btn btn-primary'>Person</a>
-    </div> }}
-
-  </div>
-
+				<div class='list-group-item'>
+					<h4 class='my-4' style='color: green;'>Projects</h4>
+					<div class='row'>
+						{{#each projects}}
+							<div class='col-3 my-2'>
+								<a
+									href='{{href}}'
+									class='btn btn-outline-primary'
+								>{{text}}</a>
+							</div>
+						{{/each}}
+					</div>
+				</div>
+			{{/with}}
+		</div>
+	</div>	
 </div>
 
 {{! 
